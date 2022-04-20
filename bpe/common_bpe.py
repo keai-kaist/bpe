@@ -23,6 +23,9 @@ class Config:
     name = None
     device = None
 
+    # database args
+    update = None
+
     # data paths
     data_dir = None
     meanpose_path = None
