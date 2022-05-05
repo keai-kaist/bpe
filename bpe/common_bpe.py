@@ -25,6 +25,7 @@ class Config:
 
     # database args
     update = None
+    cluster = None
 
     # data paths
     data_dir = None
