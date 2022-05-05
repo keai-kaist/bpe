@@ -2,6 +2,7 @@ import itertools
 import os
 
 import more_itertools
+from sklearn import cluster
 import torch
 import numpy as np
 
@@ -25,7 +26,10 @@ class Config:
 
     # database args
     update = None
-    cluster = None
+    clustering = None
+
+    # predictor args
+    k_neighbors = None
 
     # data paths
     data_dir = None
@@ -115,6 +119,10 @@ class Config:
     def __init__(self, args):
         self.name = args.name
         self.data_dir = args.data_dir
+        self.update = args.update
+        self.clustering = args.clustering
+        self.k_neighbors = args.k_neighbors
+
 
         self.use_footvel_loss = args.use_footvel_loss if hasattr(args, 'use_footvel_loss') else False
         self.invisibility_augmentation = args.use_invisibility_aug if hasattr(args, 'use_invisibility_aug') else False
