@@ -261,4 +261,4 @@ class Config:
         self.exp_dir = os.path.join(self.save_dir, 'exp_' + self.name)
         self.log_dir = os.path.join(self.exp_dir, 'log/')
         self.model_dir = os.path.join(self.exp_dir, 'model/')
-        utils.ensure_dirs([self.log_dir, self.model_dir])
+        # utils.ensure_dirs([self.log_dir, self.model_dir])
