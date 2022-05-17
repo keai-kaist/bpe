@@ -120,9 +120,9 @@ class Config:
         self.name = args.name
         self.data_dir = args.data_dir
         self.update = args.update
-        self.clustering = args.clustering
-        self.k_neighbors = args.k_neighbors
-
+        self.k_neighbors = args.k_neighbers
+        self.k_clusters = args.k_clusters
+        self.clustering = not (args.k_clusters is None)
 
         self.use_footvel_loss = args.use_footvel_loss if hasattr(args, 'use_footvel_loss') else False
         self.invisibility_augmentation = args.use_invisibility_aug if hasattr(args, 'use_invisibility_aug') else False
