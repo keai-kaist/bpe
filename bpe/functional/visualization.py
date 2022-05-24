@@ -5,7 +5,6 @@ from typing import Iterable
 import cv2
 import numpy as np
 from tqdm import tqdm
-import imageio as io
 
 
 def get_video_from_sequence(seq, height, width):
@@ -216,6 +215,9 @@ def video_out_with_imageio(output_path: str, width: int, height: int,
     :param motion_similarity_per_window:
     :return:
     """
+    
+    import imageio as io
+    
     assert sequence1.shape[1:] == (15, 2)
     assert sequence2.shape[1:] == (15, 2)
 
