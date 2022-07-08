@@ -24,6 +24,10 @@ class Config:
     name = None
     device = None
 
+    # embedding args
+    video_window_size = None
+    video_stride = None 
+    
     # database args
     update = None
     clustering = None
@@ -122,6 +126,9 @@ class Config:
         self.k_neighbors = args.k_neighbors
         self.k_clusters = args.k_clusters
         self.clustering = not (args.k_clusters is None)
+
+        self.video_window_size = args.video_sampling_window_size
+        self.video_stride = args.video_sampling_stride
 
         self.use_footvel_loss = args.use_footvel_loss if hasattr(args, 'use_footvel_loss') else False
         self.invisibility_augmentation = args.use_invisibility_aug if hasattr(args, 'use_invisibility_aug') else False
