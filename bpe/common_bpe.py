@@ -119,7 +119,6 @@ class Config:
     def __init__(self, args):
         self.name = args.name
         self.data_dir = args.data_dir
-        self.update = args.update
         self.k_neighbors = args.k_neighbors
         self.k_clusters = args.k_clusters
         self.clustering = not (args.k_clusters is None)
