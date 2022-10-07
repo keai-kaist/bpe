@@ -4,7 +4,6 @@ from collections import OrderedDict
 import itertools
 
 import torch
-from tslearn.metrics import dtw_path
 import numpy as np
 
 from bpe.model import networks_bpe

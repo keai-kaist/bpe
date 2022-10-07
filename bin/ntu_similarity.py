@@ -11,7 +11,6 @@ import pandas as pd
 import torch
 from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm
-from tslearn.metrics import dtw_path
 
 from bpe import Config
 from bpe.functional.motion import preprocess_motion2d_rc, cocopose2motion
